@@ -119,7 +119,7 @@ body {
 
 /*header*/
 .header {
-    width: 1920px;
+    max-width: 1920px;
     background: var(--color-whyte);
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 10%);
 }
@@ -218,7 +218,7 @@ body {
   transition: transform 0.3s ease-in-out;
   transform: translateY(-120%);
   z-index: 10000;
-  
+
 }
 
 .burger-button-close {
@@ -302,7 +302,7 @@ body {
 
 .swiper {
     position: absolute;
-    width: 1770px;
+    width: 100%;
     height: 620px;
     top: 0;
     z-index: 10;
@@ -326,12 +326,12 @@ body {
 /*swiper-1920-end*/
 
 .section-calculation__container {
-    height: 620px;
+    min-height: 620px;
     position: relative;
 }
 
 .section-calculation__title {
-    width: 837px;
+    max-width: 837px;
     position: relative;
     display: inline-block;
     margin: 100px 0 24px 80px;
@@ -343,7 +343,7 @@ body {
 }
 
 .section-calculation__text {
-    width: 790px;
+    max-width: 790px;
     position: relative;
     margin-bottom: 90px;
     margin-left: 80px;
@@ -398,24 +398,27 @@ body {
 }
 
 .section-about-us__container-1 {
-    display: inline-block;
-    width: 868px;
-    height: 622px;
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 868px;
+    min-height: 622px;
     margin: 0;
     margin-right: 32px;
     background-image: url(../img/section-about-us__container-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section-about-us__container-2 {
     display: inline-block;
-    width: 870px;
-    height: 622px;
+    max-width: 870px;
+    min-height: 622px;
 }
 
 .section-about-us__container-2-1 {
     display: inline-block;
-    width: 870px;
-    height: 295px;
+    width: 100%;
+    min-height: 295px;
     outline: 1px solid #cacaca;
 }
 
@@ -436,16 +439,18 @@ body {
 }
 
 .section-about-us__container-opacity {
-    width: 869px;
-    height: 196px;
+    max-width: 869px;
+    min-width: 719px;
+    min-height: 196px;
     margin-top: 426px;
     background: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .section-about-us__container-opacity__text {
-    width: 454px;
-    height: 96px;
-    margin: 0;
+    max-width: 454px;
+    min-height: 96px;
     margin: 50px 139px 50px 50px;
     font-size: 16px;
     font-weight: 700;
@@ -457,6 +462,7 @@ body {
     width: 175px;
     height: 60px;
     margin-top: 60px;
+    margin-right: 4px;
     padding: 20px 38px;
     background: none;
     outline: 3px solid var(--color-lightgold);
@@ -481,7 +487,6 @@ body {
 }
 
 .section-about-us__container-2-1__text {
-    margin: 0;
     margin: 65px 118px 8px 300px;
     font-size: 24px;
     font-weight: 700;
@@ -489,7 +494,7 @@ body {
 }
 
 .section-about-us__container-2-1__descr {
-    width: 450px;
+    max-width: 450px;
     margin: 0;
     margin-left: 300px;
     font-size: 16px;
@@ -544,7 +549,7 @@ body {
 }
 
 .section-how-we-work__link-descr {
-    width: 758px;
+    max-width: 758px;
     margin: 0;
     margin-bottom: 50px;
     font-size: 16px;
@@ -560,7 +565,7 @@ body {
 
 .section-how-we-work__link-dtn-contract {
     width: 147px;
-    height: 60px;
+    height: 58px;
     padding: 20px 38px;
     outline: 1px solid #333;
     background: none;
@@ -644,7 +649,7 @@ details > summary:first-of-type {
 
 /*accordion-1920*/
 .ui-accordion .ui-accordion-header{
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -737,15 +742,19 @@ details > summary:first-of-type {
 
   /*footer*/
   .footer-container {
-      width: 1920px;
-      height: 594px;
+      max-width: 1920px;
+      min-height: 594px;
+      justify-content: space-between;
       background-color: #222;
   }
 
   .footer-container-left {
-      width: 252px;
+      min-width: 252px;
       height: 494px;
+
       margin: 50px 350px 50px 74px;
+      margin-right: 20px;
+
   }
 
   .footer-logo-link {
@@ -806,9 +815,9 @@ details > summary:first-of-type {
   }
 
   .footer-container-center {
-      width: 570px;
+      max-width: 570px;
       margin-top: 50px;
-      margin-right: 236px;
+      margin-right: 20px;
   }
 
   .footer-container-center-text {
@@ -820,7 +829,8 @@ details > summary:first-of-type {
   }
 
   .footer-container-center-input {
-      min-width: 570px;
+      width: 100%;
+      min-width: 370px;
       padding: 14px 0 14px 24px;
       color: #cacaca;
       background: #414141;
@@ -837,7 +847,6 @@ details > summary:first-of-type {
   }
 
   .footer-container-center-textinput {
-      width: 570px;
       height: 150px;
       margin-bottom: 32px;
       resize: none;
@@ -860,12 +869,14 @@ details > summary:first-of-type {
   }
 
   .footer-container-right {
-      width: 363px;
-      height: 320px;
+      max-width: 363px;
+      min-height: 320px;
       margin-top: 137px;
   }
 
   .footer-container-right-text {
+      min-width: 302px;
+      max-height: 416px;
       margin: 0;
       color: #cacaca;
       font-size: 16px;
@@ -888,11 +899,11 @@ details > summary:first-of-type {
 
   @media (max-width: 1024px) {
     .header {
-        width: 1024px;
+        max-width: 1024px;
     }
 
     .container {
-        width: 924px;
+        max-width: 924px;
         margin-left: 50px;
         margin-right: 50px;
     }
@@ -941,7 +952,7 @@ details > summary:first-of-type {
 
     /*swiper-1024*/
     .swiper {
-        width: 924px;
+        width: 100%;
         height: 688px;
     }
 
@@ -959,13 +970,15 @@ details > summary:first-of-type {
         height: 770px;
     }
     .section-calculation__title {
+        max-width: 837px;
+        min-width: 550px;
         margin: 160px 77px 16px 77px;
         font-size: 60px;
         line-height: 73px;
     }
 
     .section-calculation__text {
-        width: 660px;
+        max-width: 660px;
         margin-bottom: 60px;
         margin-left: 77px;
         font-size: 20px;
@@ -982,7 +995,7 @@ details > summary:first-of-type {
     }
 
     .section-about-us__text {
-        height: 263px;
+        min-height: 263px;
     }
 
     .section-about-us__flex {
@@ -996,15 +1009,21 @@ details > summary:first-of-type {
         background-size: cover;
     }
 
+    .section-about-us__container-opacity {
+      min-width: 100%;
+      margin-bottom: 0;
+
+    }
+
     .section-about-us__container-2-1 {
-        width: 924px;
+        width: 100%;
     }
 
     .section-how-we-work__link-descr {
         max-width: 437px;
     }
 
-    .section-how-we-work__link-step--container {   
+    .section-how-we-work__link-step--container {
         background-position-x: 487px;
         background-size: 437px 689px;
         overflow: hidden;
@@ -1015,13 +1034,17 @@ details > summary:first-of-type {
         margin-bottom: 25px;
     }
 
+    .footer-container-center-input {
+      min-width: 297px;
+    }
+
     .footer-container-left {
         min-width: 252px;
         margin: 50px 133px 50px 49px;
     }
 
     .footer-container {
-        width: 1024px;
+        max-width: 1024px;
     }
 
     .footer-container-right {
@@ -1031,21 +1054,29 @@ details > summary:first-of-type {
 
   @media (max-width: 768px) {
     .header {
-        width: 768px;
+        max-width: 768px;
+        min-width: 500px;
     }
 
     .container {
-        width: 668px;
+        max-width: 668px;
+        min-width: 416px;
         margin-left: 50px;
         margin-right: 50px;
     }
+
 
     .section {
         margin-bottom: 80px;
     }
 
+    .section-calculation__container {
+        min-height: 100%;
+    }
+
     .section-calculation__title {
-        width: 588px;
+        max-width: 588px;
+        min-width: 312px;
         margin-left: 40px;
         margin-right: 40px;
         font-size: 50px;
@@ -1053,7 +1084,8 @@ details > summary:first-of-type {
     }
 
     .section-calculation__text {
-        width: 588px;
+        max-width: 588px;
+        min-width: 312px;
         margin-left: 40px;
         margin-right: 40px;
         font-size: 18px;
@@ -1062,8 +1094,8 @@ details > summary:first-of-type {
 
     /*swiper-768*/
     .swiper {
-        width: 668px;
-        height: 662px;
+        width: 100%;
+        height: 100%;
     }
     /*swiper-768-end*/
 
@@ -1072,17 +1104,12 @@ details > summary:first-of-type {
     }
 
     .section-about-us__text {
-        width: 668px;
+        max-width: 668px;
         min-height: 389px;
     }
 
     .section-about-us__container-1 {
-        height: 650px;
-    }
-
-    .section-about-us__container-opacity {
-        margin-top: 454px;
-        margin-bottom: 32px;
+        min-height: 650px;
     }
 
     .section-about-us__container-opacity__text {
@@ -1092,12 +1119,12 @@ details > summary:first-of-type {
     }
 
     .section-about-us__container-2 {
-        height: 502px;
+        min-height: 502px;
     }
 
     .section-about-us__container-2-1 {
         max-width: 668px;
-        max-height: 235px;
+        min-height: 235px;
         background-position: 40px 68px;
         background-size: 114px 99px;
     }
@@ -1135,8 +1162,8 @@ details > summary:first-of-type {
     }
 
     .footer-container {
-        width: 768px;
-        height: 792px;
+        max-width: 768px;
+        min-height: 792px;
         flex-direction: column-reverse;
     }
 
@@ -1152,11 +1179,13 @@ details > summary:first-of-type {
 
   @media (max-width: 320px) {
     .header {
-        width: 320px;
+        max-width: 320px;
+        min-width: 100px;
     }
 
     .container {
-        width: 290px;
+        max-width: 290px;
+        min-width: 100px;
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -1198,11 +1227,12 @@ details > summary:first-of-type {
     }
 
     .section-calculation__container {
-        height: 308px;
+        min-height: 308px;
     }
 
     .section-calculation__title {
-        width: 247px;
+        max-width: 247px;
+        min-width: 150px;
         margin: 60px 21px 6px 22px;
         text-align: center;
         font-size: 20px;
@@ -1210,7 +1240,8 @@ details > summary:first-of-type {
     }
 
     .section-calculation__text {
-        width: 247px;
+        max-width: 247px;
+        min-width: 150px;
         margin: 0 21px 32px 22px;
         text-align: center;
         font-size: 12px;
@@ -1226,11 +1257,11 @@ details > summary:first-of-type {
         font-size: 12px;
         line-height: 15px;
     }
-    
-    /*swiper-320*/       
+
+    /*swiper-320*/
     .swiper {
-        width: 290px;
-        height: 308px;
+        width: 100%;
+        height: 100%;
     }
 
     .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
@@ -1253,7 +1284,7 @@ details > summary:first-of-type {
     }
 
     .section-about-us__text {
-        width: 290px;
+        max-width: 290px;
         min-height: 678px;
         margin-bottom: 8px;
         font-size: 14px;
@@ -1261,7 +1292,7 @@ details > summary:first-of-type {
     }
 
     .section-about-us__container-1 {
-        height: 399px;
+        min-height: 100%;
         margin: 0;
         margin-bottom: 32px;
         background-image: url(../img/section-about-us__container-1-320.jpg);
@@ -1277,8 +1308,8 @@ details > summary:first-of-type {
     }
 
     .section-about-us__container-opacity__text {
-        width: 290px;
-        height: 143px;
+        max-width: 290px;
+        min-height: 143px;
         margin: 0px;
         margin-bottom: 8px;
         color: #333;
@@ -1306,7 +1337,7 @@ details > summary:first-of-type {
     }
 
     .section-about-us__container-2-1 {
-        width: 290px;
+        max-width: 290px;
         outline: none;
         background-size: 64px 49px;
         background-position: left top;
@@ -1328,7 +1359,7 @@ details > summary:first-of-type {
     }
 
     .section-about-us__container-2-1__descr {
-        width: 290px;
+        max-width: 290px;
         margin: 0;
         font-size: 14px;
         line-height: 28px;
@@ -1430,7 +1461,7 @@ details > summary:first-of-type {
 
     .footer-container {
         max-width: 320px;
-        height: 683px;
+        min-height: 683px;
     }
 
     .footer-container-center {
@@ -1439,7 +1470,7 @@ details > summary:first-of-type {
     }
 
     .footer-container-center-form {
-        width: 290px;
+        max-width: 290px;
         padding-bottom: 16px;
         border-bottom: 1px solid #595959;
     }
@@ -1452,13 +1483,14 @@ details > summary:first-of-type {
 
     .footer-container-center-input {
         min-width: 290px;
+        min-width: 100px;
         height: 60px;
         font-size: 14px;
         line-height: 32px;
     }
 
     .footer-container-center-textinput {
-        width: 290px;
+        max-width: 290px;
         height: 150px;
         margin-bottom: 25px;
     }
@@ -1510,6 +1542,6 @@ details > summary:first-of-type {
       margin: 0 auto;
     }
 
-    
+
   }
 
